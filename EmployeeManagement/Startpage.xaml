@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="App1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="427.333" Width="700">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Offset="0" Color="White"/>
+                <GradientStop Offset=" .5" Color="LightBlue"/>
+                <GradientStop Offset="1" Color="White"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+            <StackPanel x:Name="contentPanel" Margin="40,30,0,72" >
+           
+                    <StackPanel x:Name="menuPanel" Orientation="Horizontal" Margin="0,20,0,20">
+                    <Button x:Name="addEmployee" Content="Add employee" Click="Button_Click" Height="30" Width="140" BorderThickness ="1.0">
+                        <Button.Background>
+                            <SolidColorBrush Color="LightBlue"/>
+                        </Button.Background>
+                        <Button.BorderBrush>
+                            <SolidColorBrush Color="gray" />
+                        </Button.BorderBrush>
+
+                    </Button>
+                    <Button x:Name="allEmployees" Content="All employees" Click="Button_Click" Height="30" Width="140" Background="LightBlue" BorderBrush="gray" BorderThickness="1.0"/>
+
+                    <Button x:Name="closeProgram" Content="Close program" Click="Button_Click" Height="30" Width="140" Background="LightBlue" BorderBrush="gray" BorderThickness="1.0" />
+                    </StackPanel>
+               
+            
+            <TextBlock HorizontalAlignment="Left" Text="Welcome" FontSize="36"/>
+            <TextBlock Text="Employee managing program to learn XAML with C++" />
+            <TextBlock Text="Search by ID, name (forename surname), designation or department"/>
+            <StackPanel x:Name="panelPanel" Orientation="Horizontal" Margin="0,20,0,20">
+                <TextBox x:Name="nameInput" Width="300" HorizontalAlignment="Left"/>
+                <Button x:Name="inputButton" Content="Search employee" Click="Button_Click" Background="LightBlue"/>
+            </StackPanel>
+
+
+            <TextBlock x:Name="greetingOutput"/>
+        </StackPanel>
+        
+    </Grid>
+
+</Page>
