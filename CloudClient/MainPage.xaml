@@ -1,0 +1,87 @@
+﻿<Page
+    x:Class="App2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="139*"/>
+            <RowDefinition Height="111*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Background="#232F3F" Grid.Column="0" Grid.RowSpan="2">
+            <Image Source="aws(3).jpg" Margin ="30,40,44,30" Height="300" />
+            <TextBlock Text="AWS access key"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,0,0,0"
+                       />
+            <TextBox x:Name="accesskey" Margin="20,10,500,0" Text="" />
+            <TextBlock Text="Device ID"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,0,0,0"
+                       />
+            <TextBox x:Name="aws_deviceID" Margin="20,10,500,0" Text=""/>
+            <TextBlock Text="Message"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,0,0,0"
+                       />
+            <TextBox x:Name="aws_message" Margin="20,10,500,0"/>
+            <Button Name="aws_sendMessage" 
+                    Content="send" 
+                    Padding="12"
+                    HorizontalAlignment="Left" 
+                    Margin="20,10,0,0"
+                    Click="aws_button"/>
+            <TextBlock Name="aw_outputText"
+                       Text=""
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,20,0,0"
+                       />
+        </StackPanel>
+
+        <StackPanel Background="#0567DE" Grid.Column="1" Grid.RowSpan="2">
+            <Image Source="azure(2).png" Margin ="41,33,77,37" Height="300" RenderTransformOrigin="0.5,0.5" />
+            <TextBlock Text="Azure connection string"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,0,0,0"
+                       />
+            <TextBox x:Name="connectionString" Margin="20,10,500,0" />
+            <TextBlock Text="Device ID"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,0,0,0"
+                       />
+            <TextBox x:Name="azure_deviceID" Margin="20,10,500,0"/>
+            <TextBlock Text="Message"
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,0,0,0"
+                       />
+            <TextBox x:Name="azure_message" Margin="20,10,500,0"/>
+            <Button Name="azure_sendMessage" 
+                    Content="send" 
+                    Padding="12"
+                    Margin="20,10,0,0"
+                    Click="azure_button"/>
+            <TextBlock Name="az_outputText"
+                       Text=""
+                       VerticalAlignment="Center"
+                       FontSize="20"
+                       Margin="20,20,0,0"
+                       />
+        </StackPanel>
+    </Grid>
+</Page>
